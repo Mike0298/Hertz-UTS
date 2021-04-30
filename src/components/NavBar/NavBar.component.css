@@ -1,0 +1,34 @@
+.navbar {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.navbar .company {
+  color: yellow;
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+
+.navbar .title {
+  font-size: 3rem;
+}
+
+.navbar .reserve {
+  padding-right: 5rem;
+}
+
+.navbar .reserve button {
+  background-color: rgb(33, 101, 165);
+  color: #fff;
+  font-size: 2rem;
+  height: 110%;
+  width: 110%;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
