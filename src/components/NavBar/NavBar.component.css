@@ -8,10 +8,11 @@
   padding: 3rem 0;
 }
 
-.navbar .company {
+.navbar .company .title {
   color: yellow;
-  font-size: 2rem;
+  font-size: 4rem;
   padding-left: 2rem;
+  text-decoration: none;
 }
 
 .navbar .title {

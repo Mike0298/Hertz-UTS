@@ -2,12 +2,12 @@
 import { SET_SHOP, LOADING_SHOP } from "../types";
 
 const initialState = {
-  loading: false,
+  loading: true,
   shop: {},
 };
 
 export default function (state = initialState, action) {
-  switch (action.types) {
+  switch (action.type) {
     case SET_SHOP:
       return {
         loading: false,

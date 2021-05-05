@@ -1,0 +1,10 @@
+.cart {
+  width: 90%;
+  margin: auto;
+}
+
+.cart .title {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem;
+}

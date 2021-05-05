@@ -4,13 +4,28 @@ import "./Shop.component.css";
 import { connect } from "react-redux";
 import { getShop } from "../../redux/actions/shopAction";
 
+import ItemCart from "../ItemCard/ItemCard.component";
+
 export class Shop extends Component {
   componentDidMount() {
     this.props.getShop();
   }
 
   render() {
-    return <div>Shop</div>;
+    const { shop, loading } = this.props.shop;
+
+    let shopLoaded = !loading ? (
+      <div className="items">
+        {shop.cars.map(({ id, ...otherProps }) => (
+          <ItemCart key={id} id={id} {...otherProps} />
+        ))}
+      </div>
+    ) : (
+      // <div className="bruh">bruh</div>
+      <div className="loading">loading</div>
+    );
+
+    return shopLoaded;
   }
 }
 

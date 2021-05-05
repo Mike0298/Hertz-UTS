@@ -1,14 +1,28 @@
-import "./App.css";
-
+import React from "react";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import HomePage from "./pages/homepage.page";
+import "./App.css";
+
+import HomePage from "./pages/homepage/homepage.page";
+import NavBar from "./components/NavBar/NavBar.component";
+import Cart from "./pages/cart/cart.page";
+import Checkout from "./pages/checkout/checkout.page";
 
 function App() {
   return (
     <Provider store={store}>
-      <HomePage />
+      <Router>
+        <NavBar />
+        <div className="content-container">
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/checkout" component={Checkout} />
+          </Switch>
+        </div>
+      </Router>
     </Provider>
   );
 }
