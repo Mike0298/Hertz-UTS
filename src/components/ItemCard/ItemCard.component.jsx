@@ -8,7 +8,10 @@ import "./ItemCard.component.css";
 export class ItemCard extends Component {
   reserve() {
     let { addItem, ...item } = this.props;
-    addItem(item);
+    if (item.availability) {
+      addItem(item);
+      alert("Car added to cart");
+    } else alert("Sorry, the car is not available now. Please try other cars");
   }
 
   render() {
@@ -60,9 +63,7 @@ export class ItemCard extends Component {
           </div>
         </div>
         <div className="button">
-          <button disabled={!availability} onClick={() => this.reserve()}>
-            Reserve
-          </button>
+          <button onClick={() => this.reserve()}>Reserve</button>
         </div>
       </div>
     );

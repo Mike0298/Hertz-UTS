@@ -8,7 +8,7 @@ import "./App.css";
 import HomePage from "./pages/homepage/homepage.page";
 import NavBar from "./components/NavBar/NavBar.component";
 import Cart from "./pages/cart/cart.page";
-import Checkout from "./pages/checkout/checkout.page";
+import CheckoutPage from "./pages/checkout/checkout.page";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/cart" component={Cart} />
-            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/checkout" component={CheckoutPage} />
           </Switch>
         </div>
       </Router>

@@ -1,0 +1,11 @@
+.cart-container .header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5rem;
+}
+
+.cart-container .header .text {
+  font-size: 2rem;
+  text-align: center;
+  width: 20%;
+}

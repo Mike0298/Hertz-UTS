@@ -1,0 +1,74 @@
+.checkout-container {
+  width: 50vw;
+  margin: auto;
+}
+
+.checkout-container .checkout-header {
+  font-size: 3rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.checkout-container .form {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.checkout-container .form .form-detail {
+  position: relative;
+}
+
+.checkout-container .form .form-detail input {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #000;
+  margin-bottom: 3rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
+}
+
+.checkout-container .form .form-detail label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: #000;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.checkout-container .form .form-detail label:after {
+  content: "*";
+  color: red;
+}
+
+.checkout-container .form .form-detail input:focus ~ label,
+.checkout-container .form .form-detail input:valid ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 1.6rem;
+}
+
+.checkout-container .form .submit-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout-container .form .submit-btn button {
+  font-size: 1.6rem;
+  border: none;
+  background-color: rgb(33, 101, 165);
+  color: white;
+  padding: 1rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.checkout-container .form .total-price {
+  font-size: 2rem;
+}

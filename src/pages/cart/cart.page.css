@@ -8,3 +8,19 @@
   font-size: 3rem;
   margin: 2rem;
 }
+
+.cart .to-checkout {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart .to-checkout button {
+  background-color: rgb(33, 101, 165);
+  color: #fff;
+  font-size: 2rem;
+  height: 110%;
+  width: 110%;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
