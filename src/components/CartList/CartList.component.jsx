@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
 
 import CartItem from "../CartItem/CartItem.component";
 import "./CartList.component.css";
@@ -8,15 +7,6 @@ import "./CartList.component.css";
 export class CartList extends Component {
   render() {
     const { cartItems } = this.props.cart;
-
-    if (cartItems.length === 0) {
-      return (
-        <div>
-          {alert("Your cart is empty, please reserve a car to continue")}
-          <Redirect to="/" />
-        </div>
-      );
-    }
 
     return (
       <div className="cart-container">

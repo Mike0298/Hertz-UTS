@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { clearCart } from "../../redux/actions/cartAction";
 
@@ -50,6 +50,16 @@ export class Checkout extends Component {
   }
 
   render() {
+    let { cartItems } = this.props.cart;
+
+    if (cartItems.length === 0) {
+      return (
+        <div>
+          {alert("No car has been reserved")}
+          <Redirect to="/" />
+        </div>
+      );
+    }
     return (
       <div className="checkout-container">
         <div className="checkout-header">Check Out</div>
