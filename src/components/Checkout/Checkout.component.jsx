@@ -55,7 +55,9 @@ export class Checkout extends Component {
     if (cartItems.length === 0) {
       return (
         <div>
-          {alert("No car has been reserved")}
+          {alert(
+            "No car has been reserved, you will be redirected to homepage"
+          )}
           <Redirect to="/" />
         </div>
       );
