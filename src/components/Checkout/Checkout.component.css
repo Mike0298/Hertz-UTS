@@ -31,6 +31,22 @@
   background: transparent;
 }
 
+.checkout-container .form .form-detail select {
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  color: #000;
+  margin-bottom: 3rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
+}
+
+.checkout-container .form .form-detail select option {
+  font-size: 1.6rem;
+}
+
 .checkout-container .form .form-detail label {
   position: absolute;
   top: 0;
@@ -49,6 +65,13 @@
 
 .checkout-container .form .form-detail input:focus ~ label,
 .checkout-container .form .form-detail input:valid ~ label {
+  top: -20px;
+  left: 0;
+  font-size: 1.6rem;
+}
+
+.checkout-container .form .form-detail select:focus ~ label,
+.checkout-container .form .form-detail select:valid ~ label {
   top: -20px;
   left: 0;
   font-size: 1.6rem;

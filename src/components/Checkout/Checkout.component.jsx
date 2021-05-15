@@ -17,9 +17,9 @@ export class Checkout extends Component {
       address1: "",
       address2: "",
       city: "",
-      state: "",
+      state: "New South Wales",
       postcode: "",
-      payment: "",
+      payment: "Visa",
     };
   }
 
@@ -131,13 +131,18 @@ export class Checkout extends Component {
               <label>City</label>
             </div>
             <div className="form-detail">
-              <input
-                type="text"
-                name="state"
+              <select
                 value={this.state.state}
                 onChange={this.handleChange}
-                required
-              />
+                name="state"
+              >
+                <option value="New South Wales">New South Wales</option>
+                <option value="Queensland">Queensland</option>
+                <option value="South Australia">South Australia</option>
+                <option value="Tasmania">Tasmania</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Western Australia">Western Australia</option>
+              </select>
               <label>State</label>
             </div>
             <div className="form-detail">
@@ -151,13 +156,15 @@ export class Checkout extends Component {
               <label>Postcode</label>
             </div>
             <div className="form-detail">
-              <input
-                type="text"
-                name="payment"
+              <select
                 value={this.state.payment}
                 onChange={this.handleChange}
-                required
-              />
+                name="payment"
+              >
+                <option value="Visa">Visa</option>
+                <option value="Bank Deposit">Bank Deposit</option>
+                <option value="PayPal">PayPal</option>
+              </select>
               <label>Payment</label>
             </div>
             <div className="total-price">
