@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withRouter, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { clearCart } from "../../redux/actions/cartAction";
+import { setUser, setTotal } from "../../redux/actions/userAction";
 
 import { isEmail } from "../../utils/validator";
 import "./Checkout.component.css";
@@ -31,9 +32,11 @@ export class Checkout extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     if (isEmail(this.state.email)) {
-      alert("Your booking is being processed, thanks you");
+      let user = this.state;
+      this.props.setTotal(this.calculateTotal());
+      this.props.setUser(user);
       this.props.clearCart();
-      this.props.history.push("/");
+      this.props.history.push("/complete");
     } else {
       alert("Wrong email format");
     }
@@ -184,6 +187,8 @@ const mapStateToProps = (state) => ({
 
 const mapActionToProps = {
   clearCart,
+  setUser,
+  setTotal,
 };
 
 export default withRouter(connect(mapStateToProps, mapActionToProps)(Checkout));

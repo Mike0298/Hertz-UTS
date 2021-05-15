@@ -3,11 +3,14 @@ import "./Shop.component.css";
 
 import { connect } from "react-redux";
 import { getShop } from "../../redux/actions/shopAction";
+import { clearTotal, clearUser } from "../../redux/actions/userAction";
 
 import ItemCart from "../ItemCard/ItemCard.component";
 
 export class Shop extends Component {
   componentDidMount() {
+    this.props.clearTotal();
+    this.props.clearUser();
     this.props.getShop();
   }
 
@@ -35,6 +38,8 @@ const mapStateToProps = (state) => ({
 
 const mapActionToProps = {
   getShop,
+  clearUser,
+  clearTotal,
 };
 
 export default connect(mapStateToProps, mapActionToProps)(Shop);

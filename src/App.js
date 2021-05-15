@@ -9,6 +9,7 @@ import HomePage from "./pages/homepage/homepage.page";
 import NavBar from "./components/NavBar/NavBar.component";
 import Cart from "./pages/cart/cart.page";
 import CheckoutPage from "./pages/checkout/checkout.page";
+import Complete from "./pages/complete/complete.page";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/checkout" component={CheckoutPage} />
+            <Route exact path="/complete" component={Complete} />
           </Switch>
         </div>
       </Router>

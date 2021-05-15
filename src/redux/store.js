@@ -3,6 +3,7 @@ import thunk from "redux-thunk";
 
 import shopReducer from "./reducers/shopReducer";
 import cartReducer from "./reducers/cartReducer";
+import userReducer from "./reducers/userReducer";
 
 const initialState = {};
 
@@ -11,6 +12,7 @@ const middleware = [thunk];
 const reducers = combineReducers({
   shop: shopReducer,
   cart: cartReducer,
+  user: userReducer,
 });
 
 const store = createStore(

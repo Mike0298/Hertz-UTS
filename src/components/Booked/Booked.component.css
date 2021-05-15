@@ -1,0 +1,48 @@
+.booked-container {
+  width: 50vw;
+  margin: 2rem auto;
+}
+
+.booked-container .booked-header {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.booked-container .booked-sub {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.booked-container .booked-details {
+  margin: 2rem 10%;
+}
+
+.booked-container .booked-details .detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booked-container .booked-details .detail p {
+  font-size: 2rem;
+}
+
+.booked-container .total {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.booked-container .booked-btn {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.booked-container .booked-btn button {
+  font-size: 1.6rem;
+  border: none;
+  background-color: rgb(33, 101, 165);
+  color: white;
+  padding: 1rem;
+  margin: 2rem;
+  cursor: pointer;
+}
