@@ -24,9 +24,7 @@ export class Shop extends Component {
         ))}
       </div>
     ) : (
-      <div className="loading-icon">
-        <div className="lds-dual-ring"></div>
-      </div>
+      <div className="loading">Loading Shop</div>
     );
 
     return shopLoaded;
