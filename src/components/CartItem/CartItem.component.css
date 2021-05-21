@@ -23,9 +23,10 @@
   border: none;
   font-size: 2rem;
   background-color: rgb(33, 101, 165);
-  padding: 0.5rem;
+  padding: 1rem;
   color: white;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .cart-item .day > * {

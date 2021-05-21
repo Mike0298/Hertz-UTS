@@ -14,7 +14,7 @@ export class CartList extends Component {
           <div className="thumbnail text">Thumbnail</div>
           <div className="vehicle text">Vehicle</div>
           <div className="price text">Price Per Day</div>
-          <div className="day text">Reserve Day</div>
+          <div className="day text">Rental Days</div>
           <div className="action text">Actions</div>
         </div>
         {cartItems.map(({ id, ...otherProps }) => (

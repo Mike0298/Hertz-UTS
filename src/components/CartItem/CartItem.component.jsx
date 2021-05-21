@@ -33,14 +33,8 @@ export class CartItem extends Component {
   };
 
   render() {
-    const {
-      brand,
-      model,
-      model_year,
-      price_per_day,
-      image_url,
-      reserve_day,
-    } = this.props;
+    const { brand, model, model_year, price_per_day, image_url, reserve_day } =
+      this.props;
     return (
       <div className="cart-item">
         <div className="thumbnail detail">
@@ -66,7 +60,7 @@ export class CartItem extends Component {
           </button>
         </div>
         <div className="actions detail">
-          <button onClick={() => this.actionCase("clear")}>Remove</button>
+          <button onClick={() => this.actionCase("clear")}>Delete</button>
         </div>
       </div>
     );

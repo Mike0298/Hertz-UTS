@@ -68,6 +68,15 @@ export class Checkout extends Component {
     return (
       <div className="checkout-container">
         <div className="checkout-header">Check Out</div>
+        <div className="checkout-subheader">
+          <div className="subheader-title">Customer Details and Payment</div>
+          <div className="subheader-message">
+            <p>
+              Please fill in your details. <span>*</span> indicates required
+              field
+            </p>
+          </div>
+        </div>
         <div className="form">
           <form onSubmit={this.handleSubmit}>
             <div className="form-detail">
